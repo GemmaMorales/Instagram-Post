@@ -11,7 +11,7 @@ print("""<!DOCTYPE html>
 </head>
 <body>
     <div>
-        <div class="nav_bar centered">
+        <div class="nav_bar">
             <h1>Breathe Code Photo Feed</h1>
         </div>
     </div>

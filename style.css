@@ -1,25 +1,39 @@
 body {
-    background: gray;
-}
-body {
-    border: 1px dotted red;
+    background: #bbb8b8;   
 }
 .header{
     display: flex;
-    
 }
 .header > div:first-child{
-    width: 100%
+    width: 100%;
+    padding-left: 10px;
+}
+.header > div:last-child{
+    padding-right: 10px;
+    color: #bbb8b8;
 }
 img{
     width: 100%
 }
 .post{
-    margin-top: 5px;
-    background-color: white
+    margin-top: 10px;
+    background-color: white;
+    position: relative;
+    top: 70px;   
+}
+.caption{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 1px dotted #bbb8b8;
 }
 .nav_bar{
     background-color: white;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+h1{
+    text-align: center;
 }
 .centered{
     width: 500px;
