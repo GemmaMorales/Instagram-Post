@@ -1,4 +1,5 @@
 import datetime
+#current_date = datetime.date.today()
 print("""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,14 +22,68 @@ print("""<!DOCTYPE html>
                     <h2>My first photo</h2>
                 </div>
                 <div>
-                    <h2>{str(datetime.date.today())}</h2>
+                    <h2>05/20</h2>
                 </div>
             </div>
             <div class="image">
                 <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEhIQEBIVFRUPEBAPDxAPEA8PDw8PFRUWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0dHR0rLSstLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLTctLS0tLS0tKy03Ny0rKy0rKysrK//AABEIAKsBJgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQYAB//EAD4QAAIBAwIEAwYEBAENAAAAAAABAgMRIQQxBRJBURNhcQYiQoGRoRQysfBSwdHhUwcVFiNDYnKCkqOy0vH/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAiEQEBAAICAwEAAgMAAAAAAAAAAQIREiEDMUEEMmETIlH/2gAMAwEAAhEDEQA/APlNRi82GmxeR2ZOLCBTAyDTAyMMnTiGypZkGdaoJPJEoWw8SeSJsIJRKILREkSm2tjRoahsQihrR0JSdkh6DU00nI2dHw+UldLHXAz7PeztRtSs7rNmt0fTOEezkVm1lJK68xcNnycTpfZyUo8y77G/wn2aW8lsd1peFwirWHaelitkXPHBuuHl7Op9OpNb2aja1unY7uNFdiXRRXCE+W6v2c5VherMfV8KlDdH2GtoovdGNxPg6abtfsjLLwy+jmT5Y9OVdA6niPBnHL+iMaWnfY5rhxva97ZUqQCpTNOrTFZwEbPdMpKA7OmAnE1xpWFJA5RGXEFKJrMk0tOmClAd5SkqY7kkkwTHKlMC4E3I5SxaAXwyY0zPkrcHoM8WpwPEbPbCmAkGmwTiepk4cAZApDDgDdIxydELsgP4JZUDLbQBIlIYVAsqItgvYlIajQLqiGwTUS8IjSoB6ejv1/WwEBR07k1bN/qd57K+zLbi85z0MbgXCanOmrWv3X6H2f2U4alCLayrea+RePaa0+EcKUYx5krpLobUKaRMVYq5GlulSCXIciqZDINfmPc4K564bPQjkVbvgo5idbU8pWyuIXEdApZscdxnTqGEvV93/Q7ajq1NWMfimgvlmfkx5TopuVwk6PVis6Zu6zTW6GdOmcV6abZlSmK1aZrTpCtSkOZJZcqYKUTRnSBSpD5ppNRJcBlUifCHzJn1IAlSNKVEqqJFyBDwSVRH/CPeEHIFY0jw4qZItjbkJUiPCNDwSvgnpZeRjjCPhEeAaKollpzDLNoy/ACRoGktOXWnMuambHTl1pzTWnLrTiuYZi05Zac1Fpy604cyZcdMN6XTNPDsOR050XAPZuVVptYHjbbqBo+y2ihJxd8rqkfTNDS5Yr0M3g/BI0krJD3FddGhSlUltFN9L46LzOuTU7Eg1Wb/AHuA8RnE/wCn8FUjGVGooyspPmjKUG/4o/0O0oVFJJrKew7P+tYahIvzlIRMjjvEXCLUSbV4YXK6h+vr0sITnrpHK8J4x4lVwbu97GzqK6TJ5bdGXi4XVaC4lb8x6u1UXus5T2q17hCMl17E+znEZTW+CZdi+H/XlG7q9dHTxTk1FbczuN8P4lTrx5oyUvOLumZnGeErV08N80cxy0k++Dlf8nWmrUa2r09aMly8s4Skrc13JO32Lct96dhxnRqSujlqtGzaO2q/lOW19P3jl/RPqbNMqdMXnTNGUQUqZzbTazJUijpGjKmCdIOSSHhE+EPKkedMORM6VEr4Q/KmV8MXIyXhEeGOuBXwwlIp4Z4b5CA2bnXQI/Dmo6BHgHVlmnTOjQCR05oRoBY0DG5mzlpi605pKgXVAjkGbHT+Rdac0lQLKgHIM9acstOaKoFlRDma3BeFeJNY6n0rhujjSirJHJ+zDSlY7bdHd+fXDasIJRqGJ7c0ZT0lVwTc4pSio7tp7GtTlkPWpprY3ncVl7fOvY/2Rqzkq+tt/FGklyyd/wDE/wDVfPsfQo00nj7A5VuXC+xelO+R27pTqCVpcsWcrxSPiJxvudBrKmDluKQkveh9BWN/DdVncL4VDTylUveT6sjV8QuzL1PG7XUsGVV4zC+5ncp6derbvL266nWjUjyTV15jGnjRpLGDi17RwjsxvhevdaabfuoczkRcbp9D4JUupPu7r0GasIuXMsStZ4WTL4ZXtjp0GdTVcXzIOXTkynYzvszE4jTya6rqSuZPEJZMPPrijK9M6UQbiGkUscG2QMog/DGLEWFsAOJRxDtA2gMFxKuIVoq0BBOJXlCtENAAuU8XseHsFPDJVIYUC6gVcwWjSCxpB1TCRgTswFSLxpjEYF1ARFvDLKmMKBbkAy6pllTDchKiBbF4W+WaO4pSvFHDU8NM6vhep5opHZ+TP3F4+z9FWeS2rr2WCJOwlVd3k7lX29Btu7G6cmJQl5ntXqeSOOwoq9vaytHuc1xjiaimo5ZSs5ubk3johTV6e5NyaSSOR1ehnVk5SxcmjwaHU6CtTxgWdN9DP02/yVnf5qp7WGtDpPCfusOqbGqNK5FFyOaXiLi0n1OjqVlKK9DmoadXNSk7Rtf5FY2sstUxCVhTUyuwlNgKrMPPenPmEyCzKNnIhDKnmytwJ5lGi0mDbAKyKFmwcmIPNFWTcq2MPHijZ4DFLxR6x5AS6LIqXQgJEukDTLpjCyRJW564BY8VbPXIpCId0Oq5epnqReMisM7jdwbdJQ13M7XGaxg8O3N6SvE9XwZ3PHdXjSzqW3Fa9Tm2LamW4jOtY021UrsFVjdAa2oXcXeuW1/uRarsOpDNvMirSUfnYp+Mgs9bimp1/N9fsTbD2cnTT2L0FZ2ZnrW9i1TiCM7T20lLIeNQwqfEGx7TTcglP429P+W4rOeQ6xGwjKWTHz345s72s5kXKXJbOZKJM8QyrYE9KQNs8yrAIbKSZ6TBNi2Nrtg5SIbIYzSmeKNngI7zHkwSkSmKijKRKkCLIIIMpF1IAmEiMC3IcijKNioorkeUwXMeTJIeMgikAiEiwNs8LuzcawY3CUbU1g9f881geLJ18dzn9XX/AHsjpNZDDOQ4s2n6bFZt8CGp1XYzZ18ldRLzFk7/ALZhVWmfHl0ye55Jpr54L6elffZ792MzpWX0t+/kIts+U5Xuwcqo3Xf9v6GdVh2IOU3p6v7/AJnTcJhJ2ZznC9PzSSO50FHlRphNjL0POlZfIy6u5t1djH1KszP9OP1zUJM9JkXKSkcdKiXKyKKZWUw2I9NlZSKTmClMYWcilzzkQAWKshyKykGgiTPApTPADCmHpsXUcjNJCggyRZwJhEI0OHoCwWKJUS0UPQQkUmglirEFIolQJUS8UIkKISCJReMcjkNs8MibK2MjhhsJ4PW8P8DxperA5Tj9Dc66Zgcbp3TKznTbD24LU0sgaVPp6mlXpZfqAlSs7nPpdodKdm/W39ydRV2+f/0FU/UrN7egqnStWYDluws0VofzI0qNzgVG0rnU0mYHCuhv0jXAshZyMvVs0apl6mZHn9ML7LykAnMJOQvKWTgqaspEykCueZPZR6cisCbFoRLxCsyk2EqsWnMoIcwfOebKxKLS7PHkjwtK01lRLxgMRRPKTo9KwQVRuURaDEF+TAOpgYvgHKmXT0BzFbhHApUgRYl5MsmDTJk7EwaEpzyMJi0EEjIqG2uHM2o7HP8AD6mTehLB6vg/iUvatQxOLrDNqczJ4irpmuU3GsrkK6WfsJVWN692MyvVulb5mNVVajwDexZTKSkZ2HsKVQlYYvPcvQndk2Kjp+FSwbunnfBzeglY2tDPJeIsaWpVkc/rK1mbmsqpROV1lW7Zl+i9MNbE8RslCtOQWMzk0NGEik2V8TsTJ9RaHFEX0DSkLUpZuTVkXOhxRVkCLQXMWcRao4l6iJpwCclw0oqKTXmOeykBhTtueKzqP+R4rotN2UrWKzr4S7NtfYBWq9ELSkzHO6GzlOoGlOwpQQSUs+gsd6ENaete/kN82DJjLlmv97Afxt0vNGmNUNVmKzk8dgFWvmxec8CtJeU7BKTTaEa1TCD0YNpuOeSPM15XSv8AcUTtpWSFKlazsXlUsk38V7LrZYv9b/QSxKTv/C2vOVsL6jzivjY4fqMnQQr4ON0mo5Xno7Gxp+IRbSOzweTjjqoa1arZGdq6+BrU1FZHO6/VHXbrptj2zuJSyzArSszT1M3zuMsWV3ffYy6nLyOTeb2RlbtekQqEVKoj42V6ka2pZ2TJtBhvFy9LGTR4Ro8pSypwlH/mcXb72EKGX8/oZ8u1Tpr6SureZvcLkt2c1R0zjlvDWDf0srQin1kmn2CZJt6O8TqYOaqSya/FJuxhU0+byuZ+a9phjZfQD4herNKSTzn7FdTBWuuvYysKm/DkvzK2FJZTTTymmDr1Gla/RfdB40vdte/htK/rlxXza+rFdVB2vuk1H+xNK1RVWNaiFlGzbcqcZvsrq6QtSpqzv2VvXNxinJ/lluko28ug8RA9HO17jcs9L81rMV1MfDy8uaXKuqzuG0tXv8LTXq3axWz2c5ElZ73sJV4++oJ7332vZf0Cauo+d+av8xOcndN4bz8icvabR5UFtF3fVbW87kC9elLE/heE+7VzwbpNXs13f/iyIU8Xttuz3iN1N923/wBtjFXEJW7QFqbL4XjUSeRiEE25dBKY1B+6hYd0Sl9ZUV1+7BZtQale8ai37S8xerBOMm1lLDA1Kj/DWvs1Ye+w9Nu9w8qcrXztf5dxinSj4albLSd/OwGpJ+6u6V/qRZs9EqzalyrN9u9rXN7gtO0fF3STU08JReP5mXpoL8TBfvZjtKo/w1XO3hpejUpfqkXiUmqHxPVx5rR+FRXysV1lHlUc83NDxY2w1H4b+e550Iyirr/GfVZW23ohuWZVL9Gqa8oKeIj1ubpwGr71NPs91u77foK0arUlb5jnDuvlKnby95AtbTSrVYpWUVU5Utla1h4UrGvOq5Qv5YMDiSd793f7mvon/q35WEKUm6kU9pPkaeU4t5R13K7n9jG9savSk+epL/aXaZgVp+76M7LUQSg4rZSi0s9jieIfF/xETLeTXfw1Q4enTdSXWPNHry5w2ZmpjJuMrYbUW/M3tHN/hJZ+FiXCopwSebSur+lypext0HDZN09sw5ai78sXlga1FKE5JJWqyjF7Oaecd7X+4LTyd4Z6TXyNDW04+FVwvd5OXyvJXsc+XV2Ll2V53KHM/htstkMLV+6rdM/QR4Z1XTlePVpA0+hncrO0b6b71Dn02jzP0Sz6isYc7Sit8N2vi+9gcpPHpH7p3CUnZq3dFZZW9nspTquM+6bcZK1+aN9hnWUUuWUcJvFPN49kUqxSqO3Tma+o3y89Om5Xbfi5bd8OyIl2PidHWi/Di8O6jUx8TbSv52E4UKmU7NXvfNk3e13bAWnFKE5r83PLP9vmy9SbUcPrD9Ss4U7DoSg038UbRl2vfD9MW+aCTivebd+VpKyzm1r/AEIrUYx2Vr04t27tu4Oivdk+rnFPzXK3+qFbobW4lCTbqra6pxW8rJJOXpkVi9+v73L6ubcFd/Gl8rbfZA6P5f8Aq/QWV62R3UVIxSvm0d/5mdKomnJvCfpddkE1f5fkZ2klt6vfKFnldna2YNpJyeJJSiu11g8K05uUIOTv+b9WeL3otv/Z"/>
             </div>
             <div class="caption">
-                <p>This is a photo of a cute micro pig. I didn't have a special liking for pigs when I was younger but people always send me pictures of pigs since my name is Ham. Now I think pigs are cute.</p>
+                <p>This is a photo of a cute micro pig. People always send me pictures of pigs since my name is Ham. Good thing pigs are pretty cute!</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="post centered">
+            <div class="header">
+                <div>
+                    <h2>Some cute thing</h2>
+                </div>
+                <div>
+                    <h2>05/25</h2>
+                </div>
+            </div>
+            <div class="image">
+                <img src="data:image/jpeg;base64,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"/>
+            </div>
+            <div class="caption">
+                <p>This is a photo of a cute puppy.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="post centered">
+            <div class="header">
+                <div>
+                    <h2>There's paparrazi around</h2>
+                </div>
+                <div>
+                    <h2>05/27</h2>
+                </div>
+            </div>
+            <div class="image">
+                <img src="https://www2.pictures.zimbio.com/bg/Mark+in+a+white+shirt+and+cap+xh_obasd22nx.jpg"/>
+            </div>
+            <div class="caption">
+                <p>Alejandro wanted us to copy his example to the pixel. The third post on his example feed is about the paparazzi. I followed the theme but added my own flair. Here is a photo of Marky Mark being attacked by the paparrazi.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="post centered">
+            <div class="header">
+                <div>
+                    <h2>My favorite foods</h2>
+                </div>
+                <div>
+                    <h2>05/29</h2>
+                </div>
+            </div>
+            <div class="image">
+                <img src="https://www.peta.org.uk/wp-content/uploads/2019/10/vegan-salad-bowl.jpg"/>
+            </div>
+            <div class="caption">
+                <p>How delicious does this bowl of veggies look? I love experimenting with new plant foods!</p>
             </div>
         </div>
     </div>
